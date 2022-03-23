@@ -20,28 +20,8 @@ def homepage():
     else:
         name = ''
 
-    name = str(name)
 
-    if teste(name) == 'corrreto':
-        link = f"https://cep.awesomeapi.com.br/json/{str(name)}"
-        requisicao = requests.get(link)
-        dic_requisicao = requisicao.json()
-        if 404 in dic_requisicao.values():
-            name = "Informe um cep valido!"
-            return render_template("homepage.html", name=name)
-        elif 400 in dic_requisicao.values():
-            name = "Informe um cep valido!"
-            return render_template("homepage.html", name=name)
-        else:
-            um = dic_requisicao["address"]
-            dois = dic_requisicao["district"]
-            tres = dic_requisicao["city"]
-            a = (str(um) + ', ' + str(dois) + ', ' + str(tres))
-            name = f"{a}"
-            return render_template("homepage.html", name=name)
-    else:
-        name = "Informe um cep valido!"
-        return render_template("homepage.html", name=name)
+    return render_template("homepage.html", name=name)
 
 if __name__ == "__main__":
     app.run(debug=True)
