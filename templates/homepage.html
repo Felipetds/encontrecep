@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+    <title>Cep</title>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <img class="img_cabecalho" src="C:\Users\Felipe\PycharmProjects\Site_cep\templates\logo.svg">
+        <p class="texto_1">CEP</p>
+    </header>
+
+    <main class="menu">
+        <p class="texto_2">Informe o CEP</p>
+
+        <form action="{{ url_for('homepage') }}" method="post">
+          <input class="entrada" type="text" id="form_name" name="name">
+          <button class="botao" type="submit">Pesquisar</button>
+        </form>
+    </main>
+
+    <footer class="rodape">
+        <p class="texto_2">O endereço é: {{ name }}</p>
+    </footer>
+
+</body>
+
+</html>

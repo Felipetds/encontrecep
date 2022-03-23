@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;500&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+.cabecalho{
+    display:flex;
+    flex_direction:row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 50px 20px;
+}
+.img_cabecalho{
+    height:50px;
+}
+.texto_1{
+    font-family: 'Nunito', sans-serif;
+    font-size:62px;
+}
+
+.menu{
+    display:flex;
+    flex_direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 520px 20px;
+}
+.texto_2{
+    font-family: 'Nunito', sans-serif;
+    font-size:30px;
+}
+.entrada{
+    height:25px;
+    width:150px;
+}
+.botao{
+    color:#000000;
+    background-color: #ffffff;
+    height:25px;
+    width:100px;
+}
+
+.rodape{
+    display:flex;
+    flex_direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 200px 20px;
+}
